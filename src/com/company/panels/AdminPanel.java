@@ -152,7 +152,7 @@ public class AdminPanel {
         String password = scanner.next();
         System.out.println("Enter Teacher's Course ID");
         int courseId = scanner.nextInt();
-        Course course = getTeacherCourse(courseId);
+        Course course = getTeacherCourse(courseId - 1);
         Observer addingTeacher = TeacherFactory.getInstance().
                 addTeacher(teacherId, firstName, lastName, username, password, course);
         System.out.println(((Teacher) addingTeacher).getFirstName() + ' ' +

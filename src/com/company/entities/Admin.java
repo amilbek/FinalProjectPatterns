@@ -1,6 +1,6 @@
 package com.company.entities;
 
-public class Admin {
+public final class Admin {
 
     private static final String ADMIN_LOGIN = "admin";
     private static final String ADMIN_PASSWORD = "Qwerty123!";
