@@ -1,6 +1,7 @@
 package com.company.adapter;
 
 import com.company.adapter.repo.AdminTeacherAdapter;
+import com.company.entities.Course;
 import com.company.entities.Teacher;
 import com.company.factory.TeacherFactory;
 
@@ -11,12 +12,6 @@ public class AdminTeacher implements AdminTeacherAdapter {
 
     public AdminTeacher(Teacher teacher) {
         this.teacher = teacher;
-    }
-
-    @Override
-    public void addTeacher(Teacher teacher) {
-        TeacherFactory.getInstance().addTeacher(teacher.getId(), teacher.getFirstName(),
-                teacher.getLastName(), teacher.getUsername(), teacher.getPassword(), teacher.getCourse());
     }
 
     @Override

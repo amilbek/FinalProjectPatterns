@@ -18,12 +18,6 @@ public class AdminCourse implements AdminCourseAdapter {
     }
 
     @Override
-    public void addCourse(Course course) {
-        CourseFactory.getInstance().addCourse(course.getCourseId(), course.getCourseName(),
-                course.getCourseDescription());
-    }
-
-    @Override
     public void deleteCourse(Course course) {
         CourseFactory.getInstance().getCourses().remove(course);
     }

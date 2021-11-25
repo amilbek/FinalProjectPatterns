@@ -14,14 +14,6 @@ public class AdminStudent implements AdminStudentAdapter {
     }
 
     @Override
-    public void addStudent(Student student) {
-        StudentFactory.getInstance().addStudent(student.getId(), student.getFirstName(),
-                student.getLastName(), student.getUsername(), student.getPassword(),
-                student.getProgram(), student.getYear());
-
-    }
-
-    @Override
     public void deleteStudent(Student student) {
         StudentFactory.getInstance().getStudents().remove(student.getUsername());
     }

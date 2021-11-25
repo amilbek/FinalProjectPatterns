@@ -113,9 +113,9 @@ public class AdminPanel {
         String courseName = scanner.nextLine();
         System.out.println("Enter Course Description");
         String courseDescription = scanner.nextLine();
-        Observable addingCourse = CourseFactory.getInstance().
+        Course addingCourse = CourseFactory.getInstance().
                 addCourse(courseId, courseName, courseDescription);
-        System.out.println(((Course) addingCourse).getCourseName() + " was added");
+        System.out.println(addingCourse.getCourseName() + " was added");
     }
 
     public void addStudent() {
@@ -133,10 +133,10 @@ public class AdminPanel {
         String program = scanner.next();
         System.out.println("Enter Student Year");
         int year = scanner.nextInt();
-        Observer addingStudent = StudentFactory.getInstance().
+        Student addingStudent = StudentFactory.getInstance().
                 addStudent(studentId, firstName, lastName, username, password, program, year);
-        System.out.println(((Student) addingStudent).getFirstName() + ' ' +
-                ((Student) addingStudent).getLastName() + " was added");
+        System.out.println(addingStudent.getFirstName() + ' ' +
+                addingStudent.getLastName() + " was added");
     }
 
     public void addTeacher() {
@@ -153,10 +153,10 @@ public class AdminPanel {
         System.out.println("Enter Teacher's Course ID");
         int courseId = scanner.nextInt();
         Course course = getTeacherCourse(courseId - 1);
-        Observer addingTeacher = TeacherFactory.getInstance().
+        Teacher addingTeacher = TeacherFactory.getInstance().
                 addTeacher(teacherId, firstName, lastName, username, password, course);
-        System.out.println(((Teacher) addingTeacher).getFirstName() + ' ' +
-                ((Teacher) addingTeacher).getLastName() + " was added");
+        System.out.println(addingTeacher.getFirstName() + ' ' +
+                addingTeacher.getLastName() + " was added");
     }
 
     public Course getTeacherCourse(int courseId) {
